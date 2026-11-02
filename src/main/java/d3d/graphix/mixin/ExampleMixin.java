@@ -1,4 +1,4 @@
-package dx11.graphix.mixin;
+package d3d.graphix.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

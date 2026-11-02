@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "dx11.graphix.client.mixin",
+	"package": "d3d.graphix.client.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
 		"PreferredGraphicsApiMixin"

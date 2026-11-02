@@ -1,4 +1,4 @@
-# DirectGraphix
+# Direct Graphix
 
 ## Setup
 

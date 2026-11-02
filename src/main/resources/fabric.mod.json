@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "directgraphix",
+	"id": "direct-graphix",
 	"version": "${version}",
-	"name": "DirectGraphix",
+	"name": "Direct Graphix",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
@@ -12,20 +12,32 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/directgraphix/icon.png",
+	"icon": "assets/direct-graphix/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dx11.graphix.DirectGraphix"
+			{
+				"value": "d3d.graphix.DirectGraphix",
+				"adapter": "kotlin"
+			}
 		],
 		"client": [
-			"dx11.graphix.client.DirectGraphixClient"
+			{
+				"value": "d3d.graphix.client.DirectGraphixClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "d3d.graphix.client.DirectGraphixDataGenerator",
+				"adapter": "kotlin"
+			}
 		]
 	},
 	"mixins": [
-		"directgraphix.mixins.json",
+		"direct-graphix.mixins.json",
 		{
-			"config": "directgraphix.client.mixins.json",
+			"config": "direct-graphix.client.mixins.json",
 			"environment": "client"
 		}
 	],
@@ -33,6 +45,7 @@
 		"fabricloader": ">=0.20.1",
 		"minecraft": "~26.3",
 		"java": ">=25",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
 	}
 }
